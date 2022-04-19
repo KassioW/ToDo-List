@@ -6,10 +6,14 @@ import { Container } from '@mui/material';
 function App() {
   return (
     <div className="App">
-      <Container maxWidth="xs" style={{backgroundcolor: red}}>
-        <TodoItem />
+      <Container maxWidth="xs" style={{ marginTop: "1em" }}>    
+
         <Form />
+        <List sx={{ bgcolor: 'background.paper' }}>
+        <TodoItem />
+        </List>
         </Container>
+
     </div>
   );
 }

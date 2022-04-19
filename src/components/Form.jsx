@@ -5,9 +5,14 @@ export default function Form() {
 
   return (
   <Paper style={{ padding: "1em" }}>
-      <TextField id="outlined-basic" label="Outlined" variant="outlined" />
+    <div style={{ display: "flex", justifyContent: "center" }}>
+
+      <TextField id="outlined-basic" label="Tarefa" variant="outlined" fullWidth />
      <Button variant="text">Add</Button>
+   </div>
   </Paper>
+ 
     );
   }
+
 

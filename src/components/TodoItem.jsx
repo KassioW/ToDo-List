@@ -25,13 +25,7 @@ export default function TodoItem() {
   };
 
   return (
-    <List sx={{ width: '100%', bgcolor: 'background.paper' }}>
-      {[0, 1, 2, 3].map((value) => {
-        const labelId = `checkbox-list-label-${value}`;
-
-        return (
-          <ListItem
-            key={value}
+    <ListItem
             secondaryAction={
               <IconButton edge="end" aria-label="comments">
                 <CommentIcon />
@@ -39,21 +33,12 @@ export default function TodoItem() {
             }
             disablePadding
           >
-            <ListItemButton role={undefined} onClick={handleToggle(value)} dense>
+            <ListItemButton role={undefined} dense>
               <ListItemIcon>
-                <Checkbox
-                  edge="start"
-                  checked={checked.indexOf(value) !== -1}
-                  tabIndex={-1}
-                  disableRipple
-                  inputProps={{ 'aria-labelledby': labelId }}
-                />
+                <Checkbox edge="start" tabIndex={-1} disableRipple inputProps={{ 'aria-labelledby': labelId }} />
               </ListItemIcon>
-              <ListItemText id={labelId} primary={`Line item ${value + 1}`} />
+              <ListItemText />
             </ListItemButton>
           </ListItem>
         );
-      })}
-    </List>
-  );
 }
