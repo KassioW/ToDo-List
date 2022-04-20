@@ -1,21 +1,8 @@
-import './App.css';
-import Form from './components/Form';
-import TodoItem from "./components/TodoItem";
-import { Container, List } from '@mui/material';
+import "./App.css";
+import Home from "./pages/Home";
 
 function App() {
-  return (
-    <div className="App">
-      <Container maxWidth="xs" style={{ marginTop: "1em" }}>    
-
-        <Form />
-        <List sx={{ bgcolor: 'background.paper' }}>
-        <TodoItem />
-        </List>
-        </Container>
-
-    </div>
-  );
+  return <Home />;
 }
 
 export default App;
